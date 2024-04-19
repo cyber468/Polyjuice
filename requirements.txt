@@ -1,0 +1,17 @@
+bottleneck==1.3.6
+ffmpeg-python
+math
+numpy
+opencv-python
+os
+pandas
+pillow
+pyarrow
+pycrptodome
+pycrypto
+shutil
+stegano
+subprocess
+wave
+pycryptodome
+base64
