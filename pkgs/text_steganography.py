@@ -70,7 +70,16 @@ def Text_steganography(file, n,key):
         hidden_text=security.decrypt_text(key,ciph_text)
         print("[*] Extracted Data: \u001b[38;5;129m", hidden_text)
 
+    
     if n == 0:
-        Encode()
-    elif n == 1:
-        Decode()
+        try:
+            Encode()
+        except Exception as e :
+            print("[ERROR] Encoding Failed")
+            print(e)
+    else:
+        try:
+            Decode()
+        except Exception as e :
+            print("[ERROR] Decoding Failed")
+            print(e)

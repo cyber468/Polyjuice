@@ -15,7 +15,7 @@ def Audio_steganography(file, n, key):
         msg = input("[*] Enter the secret message:-")
         data= security.encrypt_text(key,msg)
         res = ''.join(format(i, '08b') for i in bytearray(data, encoding='utf-8'))
-        print("[INFO] The String after binary conversion:-{}".format(res))
+        #print("[INFO] The String after binary conversion:-{}".format(res))
         length = len(res)
         print("[INFO] Length of binary after conversion:-{}".format(length))
 
@@ -78,6 +78,14 @@ def Audio_steganography(file, n, key):
         
 
     if n == 0:
-        Encode()
+        try:
+            Encode()
+        except Exception as e :
+            print("[ERROR] Encoding Failed")
+            print(e)
     else:
-        Decode()
+        try:
+            Decode()
+        except Exception as e :
+            print("[ERROR] Decoding Failed")
+            print(e)
